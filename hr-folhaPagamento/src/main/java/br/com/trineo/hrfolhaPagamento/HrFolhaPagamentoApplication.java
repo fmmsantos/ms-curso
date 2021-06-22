@@ -1,13 +1,13 @@
-package br.com.trineo.hrtrabalho;
+package br.com.trineo.hrfolhaPagamento;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HrTrabalhoApplication {
+public class HrFolhaPagamentoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrTrabalhoApplication.class, args);
+		SpringApplication.run(HrFolhaPagamentoApplication.class, args);
 	}
 
 }
