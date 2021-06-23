@@ -1,30 +1,23 @@
 package br.com.trineo.hrfolhaPagamento.service;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 
 import br.com.trineo.hrfolhaPagamento.entity.Pagamento;
 import br.com.trineo.hrfolhaPagamento.entity.Trabalhador;
+import br.com.trineo.hrfolhaPagamento.feignClient.TrabalhadorFeignClient;
 
 @Service
 public class PagamentoService {
 	
+	
 	@Autowired
-	private RestTemplate restTemplate;
-	@Value("${hr-trabalho.host}")
-	private String trabalhoHost;
+	private TrabalhadorFeignClient feign;
 	
 	public Pagamento getPagamento(Long idTrabalho, Integer dia ) {
-		Map<String,String> uriVariable = new HashMap<String,String>();
-		uriVariable.put("id", ""+idTrabalho);
 		
-		Trabalhador trabalhador = restTemplate.getForObject(trabalhoHost + "/trabalhadores/{id}", Trabalhador.class, uriVariable);	
+		Trabalhador trabalhador = feign.findByTrabalhador(idTrabalho).getBody();
 		return new Pagamento(trabalhador.getNome(),trabalhador.getValorDoTrabalho(),dia);
 	}
 
