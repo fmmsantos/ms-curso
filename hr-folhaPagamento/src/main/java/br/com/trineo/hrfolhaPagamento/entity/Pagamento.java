@@ -6,8 +6,7 @@ public class Pagamento {
 	private Integer dia;
 	private Double total;
 	
-	
-	
+
 	public Pagamento(String nome, Double valorPagamento, Integer dia) {
 		this.nome = nome;
 		this.valorPagamento = valorPagamento;
@@ -36,7 +35,7 @@ public class Pagamento {
 		this.dia = dia;
 	}
 	public Double getTotal() {
-		return total;
+		return dia * valorPagamento;
 	}
 	public void setTotal(Double total) {
 		this.total = total;
