@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hr-eureka-server/hr-eureka-server.iml" filepath="$PROJECT_DIR$/hr-eureka-server/hr-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr-folhaPagamento/hr-folhaPagamento.iml" filepath="$PROJECT_DIR$/hr-folhaPagamento/hr-folhaPagamento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr-trabalho/hr-trabalho.iml" filepath="$PROJECT_DIR$/hr-trabalho/hr-trabalho.iml" />
+    </modules>
+  </component>
+</project>

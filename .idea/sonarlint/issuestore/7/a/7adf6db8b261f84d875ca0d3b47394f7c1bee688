@@ -1,0 +1,4 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì­¶Öûÿÿÿÿ
+W
+java:S3457 "AFormat specifiers should be used instead of string concatenation.(ÖŒŽ±
